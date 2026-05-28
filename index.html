@@ -3,14 +3,71 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Odin Rock Paper Scissors</title>
-    <style>
-      body {
-        background-color: black;
-      }
-    </style>
+    <meta
+      name="description"
+      content="A beautiful, modern, dark-themed Rock Paper Scissors game UI developed as part of The Odin Project."
+    />
+    <title>Rock Paper Scissors - Modern Edition</title>
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap"
+      rel="stylesheet"
+    />
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
+    <main class="game-container">
+      <header>
+        <h1>Rock Paper Scissors</h1>
+        <p class="subtitle">First to reach 5 points wins the game!</p>
+      </header>
+
+      <section class="score-board">
+        <div class="score-card" id="player-score-card">
+          <span class="score-label">Player</span>
+          <span class="score-value" id="player-score">0</span>
+        </div>
+
+        <div class="score-divider">:</div>
+
+        <div class="score-card" id="computer-score-card">
+          <span class="score-label">Computer</span>
+          <span class="score-value" id="computer-score">0</span>
+        </div>
+      </section>
+
+      <section class="choices-container">
+        <button class="choice-btn rock">
+          <span class="choice-icon">✊</span>
+          <span class="choice-name">Rock</span>
+        </button>
+
+        <button class="choice-btn paper">
+          <span class="choice-icon">✋</span>
+          <span class="choice-name">Paper</span>
+        </button>
+
+        <button class="choice-btn scissors">
+          <span class="choice-icon">✌️</span>
+          <span class="choice-name">Scissors</span>
+        </button>
+      </section>
+
+      <section class="display-panel">
+        <div class="result" id="round-result">Choose your weapon to start!</div>
+        <div class="final-result" id="match-result"></div>
+      </section>
+
+      <footer class="game-footer">
+        <button class="play-again-btn" id="btn-reset" style="display: none">
+          Play Again
+        </button>
+      </footer>
+    </main>
+
     <script src="script.js"></script>
   </body>
 </html>
